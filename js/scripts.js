@@ -18,10 +18,10 @@ $(document).ready(function() {
     var wordlist = {};
 
     words.forEach(function(word) {
-      if (wordlist[word] == null) {
-        wordlist[word] = 1;
-      } else {
+      if (wordlist[word]) {
         wordlist[word] += 1;
+      } else {
+        wordlist[word] = 1;
       }
     });
 
